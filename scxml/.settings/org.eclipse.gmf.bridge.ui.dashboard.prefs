@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/scxml/model/scxml.genmodel
+gmf_dashboard/domainModel=platform\:/resource/scxml/model/scxml.ecore
+gmf_dashboard/generationModel=platform\:/resource/org.apache.commons.scxml/model/scxml.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/scxml/model/scxml.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/scxml/model/scxml.gmfmap
+gmf_dashboard/option_rcp=*
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/scxml/model/scxml.gmftool

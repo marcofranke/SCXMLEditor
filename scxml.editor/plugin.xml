@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="ScxmlEditorAdvisorApplication">
+      <!-- @generated scxml -->
+      <application>
+         <run class="scxml.presentation.ScxmlEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated scxml -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="scxml.presentation.ScxmlEditorAdvisor$Perspective"
+            id="scxml.presentation.ScxmlEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated scxml -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="scxml.presentation.ScxmlEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="scxml.presentation.ScxmlEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated scxml -->
+      <key
+            commandId="scxml.presentation.ScxmlEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="scxml.presentation.ScxmlEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated scxml -->
+      <actionSet
+            label="%_UI_ScxmlEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="ScxmlEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="scxml.presentation.ScxmlEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="scxml.presentation.ScxmlEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="scxml.presentation.ScxmlEditorAdvisorOpenURICommand"
+               class="scxml.presentation.ScxmlEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="scxml.presentation.ScxmlEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="scxml.presentation.ScxmlEditorAdvisorOpenCommand"
+               class="scxml.presentation.ScxmlEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="scxml.presentation.ScxmlEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated scxml -->
+      <actionSet
+            label="%_UI_ScxmlModelWizard_ActionSet_label"
+            visible="true"
+            id="scxml.presentation.ScxmlActionBarContributorActionSet">
+         <action
+               label="%_UI_ScxmlModelWizard_label"
+               class="scxml.presentation.ScxmlActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="scxml.presentation.ScxmlActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated scxml -->
+      <editor
+            id="scxml.presentation.ScxmlEditorID"
+            name="%_UI_ScxmlEditor_label"
+            icon="icons/full/obj16/ScxmlModelFile.gif"
+            extensions="scxml"
+            class="scxml.presentation.ScxmlEditor"
+            contributorClass="scxml.presentation.ScxmlActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

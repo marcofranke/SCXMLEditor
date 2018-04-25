@@ -1,0 +1,7 @@
+# Tracing options for the scxml.diagram plug-in
+
+# Common issues
+scxml.diagram/debug=false
+
+# Visual IDs
+scxml.diagram/debug/visualID=false
